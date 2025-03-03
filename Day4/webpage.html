@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="webpg.css">
+
+</head>
+
+<body>
+    <nav>
+        <div id="m1">
+            <div>
+                <h1>E-Commerce</h1>
+            </div>
+            <div id="m11">
+                <h3>Home</h3>
+                <h3>Orders</h3>
+                <h3>WishList</h3>
+                <h3>About</h3>
+            </div>
+        </div>
+    </nav>
+    <div class="m2">
+        <h1>Login Form</h1>
+        <form action="" class="m21">
+            <table>
+                <tr>
+                    <td>
+                        <input type="text" id="m3" placeholder="Enter your Name" oninput="inputShows()">
+                    </td>
+                </tr>
+                <tr>
+                    <td id="m31">
+                        <h2></h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="colorChange()">Click Me</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        function colorChange() {
+            var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            document.body.style.backgroundColor = randomColor;
+        }
+        function inputShows() {
+            let name = document.getElementById("m3").value;
+            document.getElementById("m31").textContent = name ? `Hello, ${name}!` : '';
+
+        }
+
+    </script>
+
+
+
+</body>
+
+
+</html>
