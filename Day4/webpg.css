@@ -47,6 +47,7 @@ h1{
         border-radius: 5px;
         margin-left: 30%;
         font-size: medium;
+        cursor: pointer;
  }
  .m2 input {
         border-radius: 10px;
