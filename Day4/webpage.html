@@ -26,30 +26,22 @@
     <div class="m2">
         <h1>Login Form</h1>
         <form action="" class="m21">
-            <table>
-                <tr>
-                    <td>
-                        <input type="text" id="m3" placeholder="Enter your Name" oninput="inputShows()">
-                    </td>
-                </tr>
-                <tr>
-                    <td id="m31">
-                        <h2></h2>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button onclick="colorChange()">Click Me</button>
-                    </td>
-                </tr>
-            </table>
+
+            <input type="text" id="m3" placeholder="Enter your Name" oninput="inputShows()">
+
+
+            <h2 id="m31"></h2>
+
+            <button type="button" onclick="changeBackgroundColor()">Click Me</button>
+
         </form>
     </div>
     <script>
-        function colorChange() {
-            var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        function changeBackgroundColor() {
+            const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
             document.body.style.backgroundColor = randomColor;
         }
+
         function inputShows() {
             let name = document.getElementById("m3").value;
             document.getElementById("m31").textContent = name ? `Hello, ${name}!` : '';
